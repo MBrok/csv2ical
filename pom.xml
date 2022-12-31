@@ -4,4 +4,10 @@
   <artifactId>csv2ical</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>CSV2Ical</name>
+
+    <properties>
+      <maven.compiler.source>19</maven.compiler.source>
+      <maven.compiler.target>19</maven.compiler.target>
+    </properties>
+
 </project>

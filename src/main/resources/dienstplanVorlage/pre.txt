@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+	<title>Homepage</title>
+	<base target="_self">
+	<link rel="stylesheet" href="css/index.css" type="text/css">
+	<script>
+		var highlighted = ".td_veranstaltung_oeff";
+		function highlight(what) {
+			var elements = document.querySelectorAll(highlighted);
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].style.fontSize = '100%';
+			}
+			elements = document.querySelectorAll(highlighted + '_head');
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].style.fontSize = '100%';
+			}
+			elements = document.querySelectorAll(what);
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].style.fontSize = '150%';
+			}
+			elements = document.querySelectorAll(what + '_head');
+			for (var i = 0; i < elements.length; i++) {
+				elements[i].style.fontSize = '150%';
+			}
+			highlighted = what;
+		}
+	</script>
+</head>
+
+<body>
+
+
+	<table border="0">
+		<tr>
+			<td>
+				<p>
+					<b>
+						<font size="4" color="#004080" face="Arial">Aktuelles</font>
+					</b>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<br>
+
+
+
+	<table width="100%" border="0" cellspacing="5" cellpadding="5">
+
+		<tr>
+			<th colspan=4 style="text-align:left;">
+				<h1>Dienstplan</h1>
+				<p>
+                Liebe Aktive, F&ouml;rdernde und Interessierte: Im Folgenden findet Ihr den Dienstplan der Freiwilligen Feuerwehr D&ouml;teberg.
+                Bei &Auml;nderungen wird dieser Dienstplan aktualisiert; kurzfristig vor Terminen noch einmal nach zu sehen, lohnt sich.
+				</p>
+				<p> F&uuml;r den Import in den eigenen Kalender gibt es den <a href="dienstplan.ics" target="_blank" style="text-decoration: underline;">Dienstplan als ics - Datei</a>.</p>
+				<p> Hier findet Ihr eine aktuelle Liste unserer Termine (bitte auf die Rubrik klicken):</p>
+		</tr>
+		<tr style="height:80px">
+			<td width="25%" class="td_veranstaltung_oeff_head" style="text-align:center;cursor:pointer;"
+				onclick="highlight('.td_veranstaltung_oeff')">&Ouml;ffentliche Veranstaltung</td>
+			<td width="25%" class="td_veranstaltung_ffw_head" style="text-align:center;cursor:pointer;"
+				onclick="highlight('.td_veranstaltung_ffw')">F&uuml;r Mitglieder der Feuerwehr D&ouml;teberg</td>
+			<td width="25%" class="td_uebung_head" style="text-align:center;cursor:pointer;"
+				onclick="highlight('.td_uebung')">&Uuml;bungsdienste der Aktiven</td>
+			<td width="25%" class="td_twimc_head" style="text-align:center;cursor:pointer;"
+				onclick="highlight('.td_twimc')">Interessant nur f&uuml;r Betroffene</td>
+		</tr>

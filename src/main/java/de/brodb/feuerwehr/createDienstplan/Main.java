@@ -68,8 +68,11 @@ import java.util.Map;
 
         private static void writeEvent(String s, OutputStream out) throws IOException, ParseException {
             String[] parts = s.split(";");
+            if(parts.length < 4){
+                return;
+            }
             StringBuffer buffer = new StringBuffer();
-            Date date = isoFormat.parse(parts[0]);
+            Date date = isoFormat.parse(parts[0].trim());
             String time = parts[1];
             String text = replaceUmlauts(parts[2]);
             String category = parts[3];

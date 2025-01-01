@@ -12,7 +12,7 @@ import java.util.UUID;
 
 public class Main {
 
-	private static final String PRODID = "-//Feuerwehr Doeteberg//Dienstplan 2022//DE";
+	private static final String PRODID = "-//Feuerwehr Doeteberg//Dienstplan 2025//DE";
 
 	public static void main(String[] args) throws Exception {
 		if (args.length < 1) {
